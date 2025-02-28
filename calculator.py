@@ -5,10 +5,10 @@ import sympy as sp
 def calculator():
     def calculate():
         try:
-            ifade = entry.get()
-            conclusion = sp.sympify(ifade)
-            conclusion_label.config(text="Sonuç: " + str(conclusion))
-            geçmiş_listbox.insert(tk.END, ifade + " = " + str(conclusion))
+            expression = entry.get()
+            conclusion = sp.sympify(expression)
+            conclusion_label.config(text="Conclusion: " + str(conclusion))
+            history_listbox.insert(tk.END, expression + " = " + str(conclusion))
         except Exception as e:
             conclusion_label.config(text="Unexpected Error!")
 
@@ -33,7 +33,7 @@ def calculator():
             root.after(10)
 
     def cleared_history():
-            geçmiş_listbox.delete(0, tk.END)
+            history_listbox.delete(0, tk.END)
 
     root = tk.Tk()
     root.title("Calculator - made by em41py")
@@ -52,13 +52,13 @@ def calculator():
     conclusion_label = ttk.Label(root, text="Conclusion: ")
     conclusion_label.pack(pady=10)
 
-    geçmiş_label = ttk.Label(root, text="History: ")
-    geçmiş_label.pack(pady=10)
+    history_label = ttk.Label(root, text="History: ")
+    history_label.pack(pady=10)
 
-    geçmiş_listbox = tk.Listbox(root, height=6, width=35, font=("Arial", 10), selectmode=tk.SINGLE, bd=0, bg="#34495E", fg="white")
-    geçmiş_listbox.pack(pady=10)
+    history_listbox = tk.Listbox(root, height=6, width=35, font=("Arial", 10), selectmode=tk.SINGLE, bd=0, bg="#34495E", fg="white")
+    history_listbox.pack(pady=10)
 
-    geçmiş_listbox.config(selectbackground="#2980B9", selectforeground="white")
+    history_listbox.config(selectbackground="#2980B9", selectforeground="white")
 
     button_frame = tk.Frame(root, bg="#2C3E50")
     button_frame.pack()
