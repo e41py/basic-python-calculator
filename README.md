@@ -1,5 +1,4 @@
-# basic-python-calculator
-# Python Calculator
+# basic-calculator
 
 This is a simple Python calculator built using Tkinter and SymPy for symbolic mathematics. It includes basic arithmetic operations, trigonometric functions, logarithms, and a history feature to store previous calculations.
 
