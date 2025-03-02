@@ -1,6 +1,5 @@
 # basic-calculator
 
-This is a simple Python calculator built using Tkinter and SymPy for symbolic mathematics. It includes basic arithmetic operations, trigonometric functions, logarithms, and a history feature to store previous calculations.
 
 ## Features
 - Basic arithmetic operations: +, -, *, /
@@ -16,8 +15,3 @@ This is a simple Python calculator built using Tkinter and SymPy for symbolic ma
 - Use the "CE" button to undo the last character.
 - The "Clear History" button clears the calculation history.
 - The "Exit" button closes the application.
-
-## Requirements
-- Python 3.x
-- Tkinter (usually comes with Python)
-- SymPy (`pip install sympy`)
